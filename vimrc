@@ -149,3 +149,7 @@ function! SourceVimrc()
   exec "so ~/.vimrc"
   exec "AirlineRefresh"
 endfunction
+
+if filereadable(glob("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
